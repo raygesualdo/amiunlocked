@@ -61,14 +61,6 @@ dnc.addObserver(forName: .init("com.apple.screenIsLocked"), object: nil, queue: 
   logAndSendRequest(notification: notification, state: State.locked)
 }
 
-dnc.addObserver(forName: .init("com.apple.screensaver.didlaunch"), object: nil, queue: .main) { notification in
-  logAndSendRequest(notification: notification, state: State.locked)
-}
-
-dnc.addObserver(forName: .init("com.apple.screensaver.didstart"), object: nil, queue: .main) { notification in
-  logAndSendRequest(notification: notification, state: State.locked)
-}
-
 dnc.addObserver(forName: .init("com.apple.screenIsUnlocked"), object: nil, queue: .main) { notification in
   logAndSendRequest(notification: notification, state: State.unlocked)
 }
