@@ -1,0 +1,22 @@
+[build]
+  base = "website/"
+  publish = "website/public/"
+  command = "node index.js"
+[build.processing]
+  skip_processing = false
+[build.processing.css]
+  bundle = true
+  minify = true
+[build.processing.js]
+  bundle = true
+  minify = true
+[build.processing.html]
+  pretty_urls = false
+[build.processing.images]
+  compress = false
+
+[template]
+[template.environment]
+  TITLE = "Set your site title here. I am required."
+  KVDB_URL = "Set the URL to your kvdb bucket with the key suffix. I am required."
+  GA_ID = "Change me to your Google Analytics ID. I am optional."
