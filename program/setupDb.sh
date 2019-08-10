@@ -6,8 +6,11 @@ greenColor="\033[0;32m"
 cyanColor="\033[0;36m"
 resetColor="\033[0m"
 
-secretKey=''
-writeKey=''
+#######################
+# USER INPUT REQUIRED #
+#######################
+secretKey=""
+writeKey=""
 
 if [[ -z "$secretKey" ]]; then
   echo "A secret key is required to create a bucket. Plese fill in the 'secretKey' variable in setupDb.sh and try again."
