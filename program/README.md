@@ -35,6 +35,7 @@ Navigate to the repo [releases page](https://github.com/raygesualdo/amiunlocked/
 Building from source requires having the latest Xcode with Swift 5+ installed on your computer. In the `program` directory, run the following commands:
 
 ```shell
+swift package update
 swift package generate-xcodeproj
 swift build -c release
 ```
