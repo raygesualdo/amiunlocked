@@ -1,19 +1,9 @@
 [build]
   base = "website/"
-  publish = "website/public/"
-  command = "node index.js"
+  publish = "website/dist/"
+  command = "npm run build"
 [build.processing]
-  skip_processing = false
-[build.processing.css]
-  bundle = true
-  minify = true
-[build.processing.js]
-  bundle = true
-  minify = true
-[build.processing.html]
-  pretty_urls = false
-[build.processing.images]
-  compress = false
+  skip_processing = true
 
 [template]
 [template.environment]

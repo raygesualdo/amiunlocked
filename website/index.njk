@@ -2,16 +2,16 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <title><%= title %></title>
+    <title>{{title}}</title>
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="apple-touch-icon" href="icon.png" />
+    <link rel="apple-touch-icon" href="assets/icon.png" />
     <link
       href="https://fonts.googleapis.com/css?family=Alfa+Slab+One|Hind"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="css/normalize.css" />
-    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="assets/css/normalize.css" />
+    <link rel="stylesheet" href="assets/css/main.css" />
     <meta name="theme-color" content="#fafafa" />
   </head>
 
@@ -22,21 +22,21 @@
       <div id="updated-at">&nbsp;</div>
     </main>
     <script>
-      window.kvdbUrl = '<%= kvdbUrl %>'
+      window.kvdbUrl = '{{kvdbUrl}}'
     </script>
-    <script src="js/main.js"></script>
-    <% if (gaId) { %>
+    <script src="assets/js/main.js"></script>
+    {% if gaId %}
     <script>
       window.ga = function() {
         ga.q.push(arguments)
       }
       ga.q = []
       ga.l = +new Date()
-      ga('create', '<%= gaId %>', 'auto')
+      ga('create', '{{gaId}}', 'auto')
       ga('set', 'transport', 'beacon')
       ga('send', 'pageview')
     </script>
     <script src="https://www.google-analytics.com/analytics.js" async></script>
-    <% } %>
+    {% endif %}
   </body>
 </html>

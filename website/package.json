@@ -4,13 +4,20 @@
   "description": "Website for the amiunlocked program",
   "main": "index.js",
   "scripts": {
-    "build": "node .",
+    "start": "parcel index.njk",
+    "build": "parcel build index.njk",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Ray Gesualdo",
   "license": "MIT",
   "dependencies": {
-    "dotenv": "^8.0.0",
-    "ejs": "^2.6.2"
-  }
+    "nunjucks": "^3.2.0",
+    "parcel-bundler": "^1.12.3",
+    "parcel-plugin-asset-copier": "^1.0.0",
+    "parcel-plugin-nunjucks": "^2.1.1"
+  },
+  "browserslist": [
+    "last 2 chrome versions"
+  ],
+  "assetsPath": "static"
 }
