@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "parcel index.njk",
-    "build": "parcel build index.njk",
+    "build": "parcel build index.njk --experimental-scope-hoisting",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Ray Gesualdo",
