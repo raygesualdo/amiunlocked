@@ -33,8 +33,13 @@ GA_ID=<Google analytics site ID>
 Lastly, build your site and serve it:
 
 ```shell
+npm start
+```
+
+You can also trigger a production build:
+
+```shell
 npm run build
-npx serve ./public
 ```
 
 ## Deploy to Netlify
