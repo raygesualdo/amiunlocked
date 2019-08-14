@@ -44,13 +44,13 @@ The program binary is located at `./.build/release/amiunlocked`. You can leave i
 
 ## Setup key/value store
 
-`amiunlocked` persists your computer's locked/unlocked state using a [kvdb.io](https://kvdb.io/) store called a "bucket". Using the provided `setupDb.sh` script, take the following steps to create your own bucket:
+`amiunlocked` persists your computer's locked/unlocked state using a [kvdb.io](https://kvdb.io/) store called a "bucket". Using the provided `scripts/setupDb.sh` script, take the following steps to create your own bucket:
 
-1. Open `setupDb.sh`
+1. Open `scripts/setupDb.sh`
 2. Generate two random strings for each of the following variables and enter them in the script:
    - `secretKey`
    - `writeKey`
-3. Save and run `setupDb.sh`
+3. Save and run `scripts/setupDb.sh`
 4. Copy/paste the output to a safe location. This information cannot be recovered if lost.
 
 ## Configure program
@@ -70,14 +70,18 @@ Running `amiunlocked` requires two configuration settings: the url to your kvdb 
 
 ## Set program as background service
 
-Setting `amiunlocked` as a background service can be done via the UI. Take the following steps to set it up:
+`amiunlocked` can be configured using LaunchAgents. Take the following steps to set it up:
 
-1. Open _System Preferences_
-2. Click **Users & Groups**
-3. Select your user account
-4. Click **Login Items**
-5. Click the **+** (plus) icon
-6. Navigate to and select the `amiunlocked` binary
-7. Click **Add**
+```shell
+cd scripts
+./createPlistFile.sh
+# Provide the amiunlocked binary path to the script
+./installPlistFile.sh
+```
 
-NOTE: These steps work on macOS 10.14. For other macOS versions, the steps may be slightly different.
+That's it. You can verify the process was installed as a LaunchAgent using the following command:
+
+```shell
+tail -f /tmp/com.amiunlocked.startup.stderr
+# [2019-08-14 09:37:54.734 amiunlocked[3241:22125] Process: started
+```
