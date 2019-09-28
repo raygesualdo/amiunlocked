@@ -9,4 +9,3 @@
 [template.environment]
   TITLE = "Set your site title here. I am required."
   KVDB_URL = "Set the URL to your kvdb bucket with the key suffix. I am required."
-  GA_ID = "Change me to your Google Analytics ID. I am optional."

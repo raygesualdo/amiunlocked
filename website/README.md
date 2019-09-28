@@ -10,7 +10,6 @@ The website build process requires certain environment variables in order to run
 | ---------- | -------- | ------------------------------------------------------------------------------------------------------------ |
 | `TITLE`    | Yes      | Title of your website                                                                                        |
 | `KVDB_URL` | Yes      | The kvdb `url` value set in the program's ["Configure program"](../program/README.md#configure-program) step |
-| `GA_ID`    | No       | Google Analytics site ID                                                                                     |
 
 ## Build the site locally
 
@@ -27,7 +26,6 @@ The contents of your `.env` file should look like this:
 ```
 TITLE=<website title>
 KVDB_URL=<kvdb url>
-GA_ID=<Google analytics site ID>
 ```
 
 Lastly, build your site and serve it:

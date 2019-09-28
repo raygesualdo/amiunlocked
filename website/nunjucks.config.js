@@ -7,7 +7,6 @@
 module.exports = {
   root: './',
   data: {
-    gaId: process.env.GA_ID,
     title: process.env.TITLE,
     kvdbUrl: process.env.KVDB_URL,
   },
