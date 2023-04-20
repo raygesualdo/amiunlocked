@@ -11,7 +11,7 @@
   "author": "Ray Gesualdo",
   "license": "MIT",
   "dependencies": {
-    "nunjucks": "^3.2.0",
+    "nunjucks": "^3.2.4",
     "parcel-bundler": "^1.12.3",
     "parcel-plugin-nunjucks": "^2.1.1"
   },
